@@ -3,7 +3,7 @@ rgs = {
   rg1 = {
     name       = "rg-test"
     location   = "West US"
-    managed_by = "Anjali"
+    managed_by = "dev"
   }
 }
 
@@ -40,7 +40,7 @@ keys = {
     rg_name  = "rg-test"
     sku_name = "standard"
     # secret_name = "adminuser"
-    # secret_value = "Anjali@12345"
+    # secret_value = "dev@12345"
     rbac_authorization_enabled = true
     public_network_access_enabled = true
   }
@@ -51,14 +51,14 @@ secrets = {
     kv_name      = "key-anji-test"
     rg_name      = "rg-test"
     secret_name  = "adminuser"
-    secret_value = "anjalikvsecret"
+    secret_value = "devkvsecret"
   }
   sec2 = {
     kv_name      = "key-anji-test"
     rg_name      = "rg-test"
 
     secret_name  = "adminpassword"
-    secret_value = "Anjali@12345"
+    secret_value = "dev@12345"
   }
 }
 
@@ -83,7 +83,7 @@ vms = {
     location            = "West US"
     size                = "Standard_F2"
     admin_username      = "vm1"
-    admin_password      = "Anjali@12345"
+    admin_password      = "dev@12345"
 
     os_disk = [
       {
