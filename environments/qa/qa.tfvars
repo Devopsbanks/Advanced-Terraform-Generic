@@ -83,7 +83,7 @@ vms = {
     location            = "West US"
     size                = "Standard_F2"
     admin_username      = "vm1"
-    admin_password      = "dev@12345"
+    admin_password      = "dev@123456"
 
     os_disk = [
       {
