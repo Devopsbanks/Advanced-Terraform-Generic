@@ -278,3 +278,9 @@ variable "secrets" {
     tags            = optional(map(string))
   }))
 }
+
+
+variable "subscription_id" {
+  description = "Azure subscription ID where resources will be deployed"
+  type        = string
+}

@@ -1,3 +1,4 @@
+subscription_id = "11111111-aaaa-bbbb-cccc-111111111111"
 rgs = {
   rg1 = {
     name       = "rg-test"
