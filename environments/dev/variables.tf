@@ -90,11 +90,11 @@ variable "pips" {
 variable "vms" {
   type = map(object({
     # data block variable
-    subnet_name = string
-    vnet_name   = string
-    pip_name    = string
-    kv_name = string
-    secret_name = string
+    subnet_name  = string
+    vnet_name    = string
+    pip_name     = string
+    kv_name      = string
+    secret_name  = string
     secret_value = string
     # NIC resource details
     nic_name            = string
@@ -123,7 +123,7 @@ variable "vms" {
     vm_name        = string
     size           = string
     admin_username = string
-    admin_password = string
+    admin_password = optional(string)
 
     os_disk = list(object({
       caching                   = string

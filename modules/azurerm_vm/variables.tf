@@ -19,7 +19,7 @@ variable "vms" {
       public_ip_address_id                          = optional(string)
 
       private_ip_address                            = optional(string)
-      private_ip_address_version                    = optional(string)
+      private_ip_address_version                    = optional(string, "IPv4")
       gateway_load_balancer_frontend_ip_configuration_id = optional(string)
       primary                                       = optional(bool, false)
     }))
@@ -33,12 +33,12 @@ variable "vms" {
     accelerated_networking_enabled = optional(bool, false)
     internal_dns_name_label        = optional(string)
 
-    vm_name        = string
-    size           = string
-    admin_username = string
-    admin_password = string
+  vm_name        = string
+  size           = string
+  admin_username = string
+  admin_password = optional(string)
 
-    os_disk = list(object({
+    os_disk = optional(list(object({
       caching                    = string
       storage_account_type         = optional(string)
       disk_size_gb                 = optional(number)
@@ -51,7 +51,7 @@ variable "vms" {
       disk_encryption_set_id           = optional(string)
       secure_vm_disk_encryption_set_id = optional(string)
       security_encryption_type         = optional(string)
-    }))
+    })), [])
 
     source_image_reference = optional(list(object({
       publisher = string
